@@ -68,7 +68,7 @@ export default function Navbar() {
         <Box
           position="fixed"
           top="64px"
-          w="100%"
+          // w="100%"
           bg="white"
           zIndex={999}
           px={6}

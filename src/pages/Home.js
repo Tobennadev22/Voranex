@@ -11,7 +11,6 @@ import RevealOnScrollFadeDown from "../util/RevealOnScrolFadeDown";
 import TypingTextRotator from "../util/Typer";
 import Map from "../assets/map.png";
 
-
 import { motion } from "framer-motion";
 
 const MotionBox = motion(Box);
@@ -137,9 +136,9 @@ function Steps() {
         color="white"
         py={20}
         borderRadius="2xl"
-        mx={{ base: 4, md: 12 }}
+        mx={{ base: 6, md: 12 }}
       >
-        <Heading textAlign="center" mb={2} w={{ base: "80%", md: "100%" }}>
+        <Heading textAlign="center" mb={2} w={{ base: "100%", md: "100%" }}>
           WHY EXPANDING INTO AFRICA IS <br></br>HARD FOR GLOBAL TECH COMPANIES
         </Heading>
         <Text
@@ -148,7 +147,7 @@ function Steps() {
           alignItems={"center"}
           mx="auto"
           mb={10}
-          w={[800, 600, "100%"]}
+          w={["100%", 600, "100%"]}
         >
           Africa presents significant growth opportunities for global technology
           companies <br></br> but most expansion efforts fail due to execution
