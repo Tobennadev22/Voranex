@@ -16,20 +16,24 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Box>
+    <Flex align="center" justify="center">
       <Flex
         as="nav"
         position="fixed"
         top="0"
-        w="100%"
+        w={{ base: "100%", md: "1240px" }}
+        borderRadius={{ base: "none", md: "10px" }}
+        mt={{ base: "0", md: 6 }}
         px={{ base: 4, md: 10 }}
         py={4}
         align="center"
         justify="space-between"
         bg="white"
         zIndex={1000}
-        borderBottom="1px solid"
-        borderColor="gray.100"
+        // borderBottom="1px solid"
+        // borderColor="gray.100"
+        boxShadow="0 8px 30px rgba(0, 0, 0, 0.08)"
+        // bg="rgba(253, 253, 253, 0.76)" // 👈 opacity here
       >
         {/* Logo */}
         <Heading fontSize="lg">Voranex</Heading>
@@ -47,10 +51,11 @@ export default function Navbar() {
           size="sm"
           bg="brandBlue.500"
           color="white"
+          borderRadius={"full"}
           display={{ base: "none", md: "inline-flex" }}
           _hover={{ bg: "brandBlue.600" }}
         >
-          Book a Call
+          Get Started
         </Button>
 
         {/* Mobile Hamburger */}
@@ -68,13 +73,14 @@ export default function Navbar() {
         <Box
           position="fixed"
           top="64px"
-          // w="100%"
+          w="100%"
           bg="white"
           zIndex={999}
           px={6}
           py={4}
           borderBottom="1px solid"
           borderColor="gray.100"
+          backdropFilter="blur(12px)"
         >
           <VStack align="start" spacing={4}>
             <Text>How it works</Text>
@@ -85,13 +91,14 @@ export default function Navbar() {
               w="full"
               bg="brandBlue.500"
               color="white"
+              borderRadius={"full"}
               _hover={{ bg: "brandBlue.600" }}
             >
-              Book a Call
+              Get Started
             </Button>
           </VStack>
         </Box>
       )}
-    </Box>
+    </Flex>
   );
 }

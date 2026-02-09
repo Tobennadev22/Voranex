@@ -21,6 +21,19 @@ const Theme = extendTheme({
       100: "linear-gradient(90deg, #2B61EE 0%, #5c721f 100%)",
     },
 
+    Accent1: {
+      50: "#F9FAFB",
+    },
+
+    Accent2: {
+      50: "#f9fdfe",
+      100: "#06B6D4",
+    },
+
+    DarkText: {
+      50: "#111827",
+    },
+
     primaryColor: {
       50: "#fffff8",
       100: "#fffeeb",
@@ -53,6 +66,8 @@ const Theme = extendTheme({
     bgCustom: {
       600: "#132935",
       900: "#0a171eff",
+      500: "#F5F1DC",
+      400: "#f7f5e9",
     },
 
     bgCustomA: {
