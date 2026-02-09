@@ -21,9 +21,9 @@ export default function Navbar() {
         as="nav"
         position="fixed"
         top="0"
-        w={{ base: "100%", md: "1240px" }}
-        borderRadius={{ base: "none", md: "10px" }}
-        mt={{ base: "0", md: 6 }}
+        w={{ base: "100%", md: "100%" }}
+        // borderRadius={{ base: "none", md: "10px" }}
+        // mt={{ base: "0", md: 6 }}
         px={{ base: 4, md: 10 }}
         py={4}
         align="center"

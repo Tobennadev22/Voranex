@@ -13,9 +13,10 @@ import {
 } from "@chakra-ui/react";
 import { CheckCircleIcon } from "@chakra-ui/icons";
 import VoranexImage1 from "../assets/voranexImage1.jpg";
+import Footer from "../layout/Footer";
 
 import TypingTextRotator from "../util/Typer";
-import Map from "../assets/Bg-video.mp4";
+
 import Rocket from "../assets/rocket.png";
 import Bulb from "../assets/bulb.png";
 
@@ -29,12 +30,12 @@ function Home() {
   return (
     <div>
       <Hero />
-      <OURVALUE />
       <Steps />
+      <OURVALUE />
       <WhoWeServe />
       <Features />
-
       <CTA />
+      <Footer />
     </div>
   );
 }
@@ -55,7 +56,7 @@ function Hero() {
       // bgAttachment={"fixed"}
       // height={["100vh"]}
     >
-      <Box
+      {/* <Box
         as="video"
         src={Map}
         autoPlay
@@ -69,10 +70,10 @@ function Hero() {
         height="100%"
         objectFit="cover"
         zIndex={-2}
-      />
+      /> */}
 
       {/* Dark Overlay */}
-      <Box
+      {/* <Box
         position="absolute"
         top="0"
         left="0"
@@ -80,7 +81,7 @@ function Hero() {
         height="100%"
         bg="blackAlpha.800" // adjust darkness here
         zIndex={-1}
-      />
+      /> */}
       <Text
         fontSize="sm"
         letterSpacing="wider"
@@ -103,18 +104,17 @@ function Hero() {
           color="brandBlue.500"
           textAlign="center"
         />
-        <span style={{ color: "#fff" }}>ACROSS AFRICA</span>
+        ACROSS AFRICA
       </Heading>
       <Heading
         fontSize={{ base: "2xl", md: "3xl" }}
         maxW="900px"
         mx="auto"
         fontWeight={"light"}
-        color="Accent1.50"
       >
         <em> WITHOUT LOCAL PRESENCE OR UNMANAGED RISK</em>
       </Heading>
-      <Text maxW="640px" mx="auto" mt={6} color="gray.100">
+      <Text maxW="640px" mx="auto" mt={6}>
         Voranex helps global B2B technology companies expand into African
         markets through structured execution, local operating infrastructure,
         and real market validation.
@@ -143,7 +143,7 @@ function OURVALUE() {
       // bg="blackAlpha.900"
       // bg="brandBlue.900"
       // bg="Accent2.50"
-      color="Accent1.50.50"
+      color="DarkText50"
       py={{ base: 10, md: 16 }}
       px={{ base: 2, md: 20 }}
       borderRadius="2xl"
@@ -271,7 +271,7 @@ function Steps() {
         mb={2}
         w={{ base: "100%", md: "100%" }}
         fontSize={"3xl"}
-        color="brandBlue.500"
+        color="DarkText.50"
       >
         WHY EXPANDING INTO AFRICA IS <br></br>HARD FOR GLOBAL TECH COMPANIES
       </Heading>
@@ -331,7 +331,7 @@ function WhoWeServe() {
       // w={{ base: "100%", md: "100%" }}
       mx={{ base: 6, md: 12 }}
     >
-      <Heading mb={2} fontSize={"3xl"} color="brandBlue.500">
+      <Heading mb={2} fontSize={"3xl"} color="DarkText.50">
         VORANEX IS NOT A CONSULTING FIRM
       </Heading>
       <Text mb={8}>
