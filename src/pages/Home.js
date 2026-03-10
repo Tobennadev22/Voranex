@@ -408,15 +408,15 @@ function Steps() {
 }
 
 function WhoWeServe() {
-  const Weare = [
+  const Wenot = [
     "A strategy or advisory consultancy",
     "A strategy or advisory consultancy",
     "A network of middlemen or introduction brokers",
   ];
 
-  const Wenot = [
-    "An operating partner responsible for execution",
-    "Outcome-driven, not hour-driven",
+  const Weare = [
+    "We are an operating partner responsible for execution",
+    "We are outcome-driven, not hour-driven",
     "Structured to provide clarity, control, and accountability",
   ];
 
