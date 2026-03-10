@@ -1,9 +1,9 @@
-import React from "react";
+import { Link as ReactRouterLink } from "react-router-dom";
+import { Link as ChakraLink } from "@chakra-ui/react";
+import { HashLink } from "react-router-hash-link";
 import {
   Flex,
-  Heading,
   HStack,
-  Text,
   Button,
   Box,
   IconButton,
@@ -11,6 +11,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import voranexafrica from "../assets/Voranexafrica_logo.png";
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -21,39 +22,86 @@ export default function Navbar() {
         as="nav"
         position="fixed"
         top="0"
-        w={{ base: "100%", md: "100%" }}
+        w={{ base: "100%", md: "1300px" }}
         // borderRadius={{ base: "none", md: "10px" }}
-        // mt={{ base: "0", md: 6 }}
+        mt={{ base: "0", md: 8 }}
         px={{ base: 4, md: 10 }}
-        py={4}
+        py={{ base: 4, md: 4 }}
         align="center"
         justify="space-between"
-        bg="white"
+        // spacing={4}
+        // bg="#fbfbfb"
         zIndex={1000}
-        // borderBottom="1px solid"
-        // borderColor="gray.100"
+        borderRadius="24px"
         boxShadow="0 8px 30px rgba(0, 0, 0, 0.08)"
-        // bg="rgba(253, 253, 253, 0.76)" // 👈 opacity here
+        bg="rgba(255, 255, 250, 0.86)" // 👈 opacity here
       >
         {/* Logo */}
-        <Heading fontSize="lg">Voranex</Heading>
-
+        {/* <Heading fontSize="lg">Voranex</Heading> */}
+        <ChakraLink as={ReactRouterLink} to="/">
+          <img
+            src={voranexafrica}
+            alt="Voranex Africa Logo"
+            style={{ height: "40px" }}
+          />
+        </ChakraLink>
         {/* Desktop Menu */}
+
         <HStack spacing={8} display={{ base: "none", md: "flex" }}>
-          <Text cursor="pointer">How it works</Text>
-          <Text cursor="pointer">Markets</Text>
-          <Text cursor="pointer">About</Text>
-          <Text cursor="pointer">FAQ</Text>
+          <ChakraLink
+            as={ReactRouterLink}
+            to="/"
+            _hover={{ textDecoration: "none", color: "brandRed.500" }}
+          >
+            Home
+          </ChakraLink>
+          <ChakraLink
+            as={HashLink}
+            smooth
+            to="/#how-it-works"
+            _hover={{ textDecoration: "none", color: "brandRed.500" }}
+          >
+            How it works
+          </ChakraLink>
+          {/* <Text cursor="pointer" fontWeight={"medium"}>
+            How it works
+          </Text> */}
+          <ChakraLink
+            as={HashLink}
+            smooth
+            to="/#markets"
+            _hover={{ textDecoration: "none", color: "brandRed.500" }}
+          >
+            Markets
+          </ChakraLink>
+          <ChakraLink
+            as={ReactRouterLink}
+            to="/about"
+            _hover={{ textDecoration: "none", color: "brandRed.500" }}
+          >
+            About
+          </ChakraLink>
+          {/* <Text cursor="pointer" fontWeight={"medium"}>
+            About
+          </Text> */}
+          <ChakraLink
+            as={HashLink}
+            smooth
+            to="/#faq"
+            _hover={{ textDecoration: "none", color: "brandRed.500" }}
+          >
+            FAQ
+          </ChakraLink>
         </HStack>
 
         {/* Desktop CTA */}
         <Button
           size="sm"
-          bg="brandBlue.500"
+          bg="brandRed.500"
           color="white"
           borderRadius={"full"}
           display={{ base: "none", md: "inline-flex" }}
-          _hover={{ bg: "brandBlue.600" }}
+          _hover={{ bg: "brandRed.600" }}
         >
           Get Started
         </Button>
@@ -77,22 +125,36 @@ export default function Navbar() {
           bg="white"
           zIndex={999}
           px={6}
-          py={4}
+          py={2}
           borderBottom="1px solid"
           borderColor="gray.100"
           backdropFilter="blur(12px)"
         >
-          <VStack align="start" spacing={4}>
-            <Text>How it works</Text>
-            <Text>Markets</Text>
-            <Text>About</Text>
-            <Text>FAQ</Text>
+          <VStack align="start" spacing={4} pt={{ base: 4, md: 0 }}>
+            <ChakraLink as={ReactRouterLink} to="/">
+              Home
+            </ChakraLink>
+            <ChakraLink as={HashLink} smooth to="/#how-it-works">
+              How it works
+            </ChakraLink>
+            {/* <Text cursor="pointer" fontWeight={"medium"}>
+            How it works
+          </Text> */}
+            <ChakraLink as={HashLink} smooth to="/#markets">
+              Markets
+            </ChakraLink>
+            <ChakraLink as={ReactRouterLink} to="/about">
+              About
+            </ChakraLink>
+
+            <ChakraLink as={HashLink} smooth to="/#faq">
+              FAQ
+            </ChakraLink>
             <Button
               w="full"
-              bg="brandBlue.500"
+              bg="brandRed.500"
               color="white"
               borderRadius={"full"}
-              _hover={{ bg: "brandBlue.600" }}
             >
               Get Started
             </Button>

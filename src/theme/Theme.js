@@ -19,6 +19,7 @@ const Theme = extendTheme({
     gradientColor: {
       50: " linear-gradient(90deg, #d53369 0%, #daae51 100%)",
       100: "linear-gradient(90deg, #2B61EE 0%, #5c721f 100%)",
+      200: " linear-gradient(315deg, #ededed, #fcfbf5);",
     },
 
     Accent1: {
@@ -28,6 +29,19 @@ const Theme = extendTheme({
     Accent2: {
       50: "#f9fdfe",
       100: "#06B6D4",
+    },
+
+    brandRed: {
+      50: "#FEE2E2",
+      100: "#FECACA",
+      200: "#FCA5A5",
+      300: "#F87171",
+      400: "#EF4444",
+      500: "#DC2626",
+      600: "#B91C1C",
+      700: "#991B1B",
+      800: "#7F1D1D",
+      900: "#581515",
     },
 
     DarkText: {
@@ -48,6 +62,7 @@ const Theme = extendTheme({
     },
 
     lemonColor: {
+       10: "#fcfdf7",
       50: "#f3f6ea",
       100: "#d8e2bd",
       200: "#c6d49d",
@@ -71,7 +86,7 @@ const Theme = extendTheme({
     },
 
     bgCustomA: {
-      600: "#f1f4f8",
+      600: "#f6f7f9",
     },
   },
   fonts: {
@@ -81,33 +96,3 @@ const Theme = extendTheme({
 });
 
 export default Theme;
-
-// // For Chakra UI v2.x:
-// import { createSystem, defaultConfig } from "@chakra-ui/react";
-
-// // Create a custom system
-// const Theme = createSystem(defaultConfig, {
-//   theme: {
-//     tokens: {
-//       colors: {
-//         blue: {
-//           50: { value: "#eff6ff" },
-//           100: { value: "#dbeafe" },
-//           200: { value: "#bfdbfe" },
-//           // ... add your colors
-//         },
-//       },
-//       fonts: {
-//         heading: { value: "Inter, sans-serif" },
-//         body: { value: "Inter, sans-serif" },
-//       },
-//     },
-//     semanticTokens: {
-//       colors: {
-//         "bg.card": { value: "{colors.white}" },
-//       },
-//     },
-//   },
-// });
-
-// export default Theme;
