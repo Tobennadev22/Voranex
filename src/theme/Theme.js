@@ -90,7 +90,7 @@ const Theme = extendTheme({
     },
   },
   fonts: {
-    Heading: "Plus-Jakarta-Sans, open-sans",
+    Heading: "poppins, Plus-Jakarta-Sans, open-sans",
     body: "inter, sans-serif",
   },
 });

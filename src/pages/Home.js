@@ -33,6 +33,8 @@ import Kenya from "../assets/Kenya.png";
 import Nigeria from "../assets/Nigeria.png";
 import SouthAfrica from "../assets/SouthAfrica.png";
 import Companies from "../assets/companies.png";
+import RevealOnScrollFadeDown from "../util/RevealOnScrolFadeDown";
+import Map from "../assets/map.png";
 
 import TypingTextRotator from "../util/Typer";
 
@@ -62,7 +64,7 @@ function Hero() {
     <Box
       as="section"
       pt={[32, 48, 48]}
-      pb={[18, 32, 32]}
+      pb={[0, 0, 0]}
       textAlign="center"
       bg="gradientColor.200"
       borderRadius="2xl"
@@ -89,10 +91,11 @@ function Hero() {
         maxW="900px"
         mx="auto"
         p={2}
+        fontWeight="medium"
       >
         <TypingTextRotator
           texts={["OPERATE", "SELL", "AND SCALE"]}
-          fontWeight="Semibold"
+          fontWeight="medium"
           color="bgCustom.600"
           textAlign="center"
         />
@@ -111,7 +114,7 @@ function Hero() {
         mx="auto"
         mt={6}
         textColor={"gray.500"}
-        fontSize={{ base: "14px", md: "18px" }}
+        fontSize={{ base: "12px", md: "16px" }}
       >
         Voranex helps global B2B technology companies expand into African
         markets through structured execution, local operating infrastructure,
@@ -132,6 +135,12 @@ function Hero() {
       >
         Get Started
       </Button>
+
+      <img
+        src={Map}
+        alt="Africa map"
+        style={{ marginTop: "40px", width: "100%", opacity: 0.4 }}
+      />
     </Box>
   );
 }
@@ -140,173 +149,175 @@ function OURVALUE() {
   return (
     <Box
       color="DarkText50"
-      py={{ base: 10, md: 16 }}
+      py={{ base: 4, md: 8 }}
       px={{ base: 4, md: 10 }}
       borderRadius="2xl"
-      my={{ base: 12, md: 20 }}
+      my={{ base: 4, md: 8 }}
       mx={{ base: 2, md: 12 }}
     >
-      <Box textAlign="center">
-        <Heading
-          mb={2}
-          fontSize={{ base: "2xl", md: "3xl" }}
-          fontWeight="medium"
-        >
-          OUR MISSION & VISION
-        </Heading>
-      </Box>
-
-      <SimpleGrid
-        columns={{ base: 1, md: 2 }}
-        spacing={{ base: 8, md: 6 }}
-        maxW="1400px"
-        mx="auto"
-        pt={{ base: 10, md: "48px" }}
-      >
-        {/* CARD 1 */}
-
-        <Box
-          color="DarkText.50"
-          py={{ base: 8, md: 12 }}
-          px={{ base: 6, md: 12 }}
-          borderRadius="16px"
-          bg="#f9f9f9"
-        >
+      <RevealOnScrollFadeDown>
+        <Box textAlign="center">
           <Heading
-            fontSize={{ base: "xl", md: "2xl" }}
-            mb={4}
-            textAlign={{ base: "center", md: "left" }}
-            fontWeight="bold"
+            mb={2}
+            fontSize={{ base: "2xl", md: "3xl" }}
+            fontWeight="medium"
           >
-            OUR COMMITMENT TO GROWTH AND IMPACT
+            OUR MISSION & VISION
           </Heading>
-
-          <Text
-            textAlign={{ base: "center", md: "left" }}
-            color="gray.500"
-            mb={{ base: 8, md: 12 }}
-            fontSize={{ base: "sm", md: "md" }}
-          >
-            To be the most trusted and accountable operating partner for global
-            technology companies expanding into Africa.
-          </Text>
-
-          <Box
-            position="relative"
-            overflow="hidden"
-            borderRadius="xl"
-            role="group"
-            cursor="pointer"
-          >
-            <Image
-              src={VoranexImage2}
-              alt="voranex-img"
-              borderRadius="10px"
-              w="100%"
-              h={{ base: "200px", md: "300px" }}
-              objectFit="cover"
-              transition="transform 0.4s ease-in-out"
-              _groupHover={{
-                transform: "scale(1.05)",
-              }}
-            />
-
-            <Box
-              position="absolute"
-              inset="0"
-              bg="blackAlpha.600"
-              opacity="0"
-              transition="opacity 0.4s ease"
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-              _groupHover={{ opacity: 1 }}
-            >
-              <Text
-                color="white"
-                fontSize={{ base: "lg", md: "xl" }}
-                fontWeight="bold"
-                transform="translateY(20px)"
-                transition="all 0.4s ease"
-                _groupHover={{ transform: "translateY(-10px)" }}
-              >
-                Partnership with Impact
-              </Text>
-            </Box>
-          </Box>
         </Box>
 
-        {/* CARD 2 */}
-
-        <Box
-          color="grey.100"
-          py={{ base: 8, md: 12 }}
-          px={{ base: 6, md: 12 }}
-          borderRadius="16px"
-          bg="#f1f4f8"
+        <SimpleGrid
+          columns={{ base: 1, md: 2 }}
+          spacing={{ base: 8, md: 6 }}
+          maxW="1400px"
+          mx="auto"
+          pt={{ base: 10, md: "48px" }}
         >
-          <Heading
-            fontSize={{ base: "xl", md: "2xl" }}
-            mb={4}
-            textAlign={{ base: "center", md: "left" }}
-            fontWeight="bold"
-          >
-            DEDICATED TO EXCELLENCE AND INNOVATION
-          </Heading>
-
-          <Text
-            textAlign={{ base: "center", md: "left" }}
-            mb={6}
-            color="gray.500"
-            fontSize={{ base: "sm", md: "md" }}
-          >
-            Enable global technology companies to operate, sell, and scale
-            across Africa through reliable execution, local infrastructure, and
-            measurable outcomes.
-          </Text>
+          {/* CARD 1 */}
 
           <Box
-            position="relative"
-            overflow="hidden"
-            borderRadius="xl"
-            role="group"
-            cursor="pointer"
+            color="DarkText.50"
+            py={{ base: 8, md: 12 }}
+            px={{ base: 6, md: 12 }}
+            borderRadius="16px"
+            bg="#f9f9f9"
           >
-            <Image
-              src={VoranexImage3}
-              alt="voranex-img"
-              borderRadius="10px"
-              w="100%"
-              h={{ base: "200px", md: "300px" }}
-              objectFit="cover"
-              transition="transform 0.4s ease-in-out"
-              _groupHover={{
-                transform: "scale(1.05)",
-              }}
-            />
+            <Heading
+              fontSize={{ base: "xl", md: "2xl" }}
+              mb={4}
+              textAlign={{ base: "center", md: "left" }}
+              fontWeight="bold"
+            >
+              OUR COMMITMENT TO GROWTH AND IMPACT
+            </Heading>
+
+            <Text
+              textAlign={{ base: "center", md: "left" }}
+              color="gray.500"
+              mb={{ base: 8, md: 12 }}
+              fontSize={{ base: "sm", md: "md" }}
+            >
+              To be the most trusted and accountable operating partner for
+              global technology companies expanding into Africa.
+            </Text>
 
             <Box
-              position="absolute"
-              inset="0"
-              bg="blackAlpha.600"
-              opacity="0"
-              transition="opacity 0.4s ease"
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-              _groupHover={{ opacity: 1 }}
+              position="relative"
+              overflow="hidden"
+              borderRadius="xl"
+              role="group"
+              cursor="pointer"
             >
-              <Text
-                color="white"
-                fontSize={{ base: "lg", md: "xl" }}
-                fontWeight="bold"
+              <Image
+                src={VoranexImage2}
+                alt="voranex-img"
+                borderRadius="10px"
+                w="100%"
+                h={{ base: "200px", md: "300px" }}
+                objectFit="cover"
+                transition="transform 0.4s ease-in-out"
+                _groupHover={{
+                  transform: "scale(1.05)",
+                }}
+              />
+
+              <Box
+                position="absolute"
+                inset="0"
+                bg="blackAlpha.600"
+                opacity="0"
+                transition="opacity 0.4s ease"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                _groupHover={{ opacity: 1 }}
               >
-                Across Africa
-              </Text>
+                <Text
+                  color="white"
+                  fontSize={{ base: "lg", md: "xl" }}
+                  fontWeight="bold"
+                  transform="translateY(20px)"
+                  transition="all 0.4s ease"
+                  _groupHover={{ transform: "translateY(-10px)" }}
+                >
+                  Partnership with Impact
+                </Text>
+              </Box>
             </Box>
           </Box>
-        </Box>
-      </SimpleGrid>
+
+          {/* CARD 2 */}
+
+          <Box
+            color="grey.100"
+            py={{ base: 8, md: 12 }}
+            px={{ base: 6, md: 12 }}
+            borderRadius="16px"
+            bg="#f1f4f8"
+          >
+            <Heading
+              fontSize={{ base: "xl", md: "2xl" }}
+              mb={4}
+              textAlign={{ base: "center", md: "left" }}
+              fontWeight="bold"
+            >
+              DEDICATED TO EXCELLENCE AND INNOVATION
+            </Heading>
+
+            <Text
+              textAlign={{ base: "center", md: "left" }}
+              mb={6}
+              color="gray.500"
+              fontSize={{ base: "sm", md: "md" }}
+            >
+              Enable global technology companies to operate, sell, and scale
+              across Africa through reliable execution, local infrastructure,
+              and measurable outcomes.
+            </Text>
+
+            <Box
+              position="relative"
+              overflow="hidden"
+              borderRadius="xl"
+              role="group"
+              cursor="pointer"
+            >
+              <Image
+                src={VoranexImage3}
+                alt="voranex-img"
+                borderRadius="10px"
+                w="100%"
+                h={{ base: "200px", md: "300px" }}
+                objectFit="cover"
+                transition="transform 0.4s ease-in-out"
+                _groupHover={{
+                  transform: "scale(1.05)",
+                }}
+              />
+
+              <Box
+                position="absolute"
+                inset="0"
+                bg="blackAlpha.600"
+                opacity="0"
+                transition="opacity 0.4s ease"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+                _groupHover={{ opacity: 1 }}
+              >
+                <Text
+                  color="white"
+                  fontSize={{ base: "lg", md: "xl" }}
+                  fontWeight="bold"
+                >
+                  Across Africa
+                </Text>
+              </Box>
+            </Box>
+          </Box>
+        </SimpleGrid>
+      </RevealOnScrollFadeDown>
     </Box>
   );
 }
@@ -429,7 +440,7 @@ function WhoWeServe() {
       py={{ base: 12, md: 20 }}
       px={{ base: 6, md: 12 }}
       borderRadius="2xl"
-      mb={10}
+      // mb={10}
       mt={{ base: 6, md: 10 }}
     >
       <Heading mb={3} fontSize={{ base: "xl", md: "3xl" }} fontWeight="medium">
@@ -603,23 +614,23 @@ const steps = [
     items: [
       {
         id: 1,
-        text: "Customer discovery and stakeholder interviews",
+        text: "Local execution and coordination",
       },
       {
         id: 2,
-        text: "Pricing and willingness-to-pay validation",
+        text: "Hiring and partner engagement",
       },
       {
         id: 3,
-        text: "Sales channel and partnership testing",
+        text: "B2B commercial execution",
       },
       {
         id: 4,
-        text: "Regulatory feasibility assessment",
+        text: "Payment collection and workflow management",
       },
       {
         id: 5,
-        text: "Payment infrastructure and FX review",
+        text: "Weekly operational reporting and performance tracking",
       },
     ],
     img: "/images/ai-tasks.png",
@@ -631,23 +642,15 @@ const steps = [
     items: [
       {
         id: 1,
-        text: "Customer discovery and stakeholder interviews",
+        text: "Expansion into additional African countries",
       },
       {
         id: 2,
-        text: "Pricing and willingness-to-pay validation",
+        text: "Local incorporation and compliance support",
       },
       {
         id: 3,
-        text: "Sales channel and partnership testing",
-      },
-      {
-        id: 4,
-        text: "Regulatory feasibility assessment",
-      },
-      {
-        id: 5,
-        text: "Payment infrastructure and FX review",
+        text: "Transition into internal or hybrid operating models",
       },
     ],
     img: "/images/explore.png",

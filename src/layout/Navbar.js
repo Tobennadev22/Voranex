@@ -22,7 +22,7 @@ export default function Navbar() {
         as="nav"
         position="fixed"
         top="0"
-        w={{ base: "100%", md: "1300px" }}
+        w={{ base: "100%", md: "900px" }}
         // borderRadius={{ base: "none", md: "10px" }}
         mt={{ base: "0", md: 8 }}
         px={{ base: 4, md: 10 }}
@@ -32,7 +32,7 @@ export default function Navbar() {
         // spacing={4}
         // bg="#fbfbfb"
         zIndex={1000}
-        borderRadius="24px"
+        borderRadius="full"
         boxShadow="0 8px 30px rgba(0, 0, 0, 0.08)"
         bg="rgba(255, 255, 250, 0.86)" // 👈 opacity here
       >
@@ -102,6 +102,8 @@ export default function Navbar() {
           borderRadius={"full"}
           display={{ base: "none", md: "inline-flex" }}
           _hover={{ bg: "brandRed.600" }}
+          as="a"
+          href="https://tally.so/r/zxNRP1"
         >
           Get Started
         </Button>
@@ -155,6 +157,8 @@ export default function Navbar() {
               bg="brandRed.500"
               color="white"
               borderRadius={"full"}
+              as="a"
+              href="https://tally.so/r/zxNRP1"
             >
               Get Started
             </Button>
