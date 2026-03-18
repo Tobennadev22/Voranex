@@ -325,12 +325,12 @@ function OURVALUE() {
 function Steps() {
   const steps = [
     {
-      Title: "Enviroment",
+      Title: "Environment",
       Body: "Complex and fragmented regulatory environments",
       // Shade: "Orange",
     },
     {
-      Title: "Accoutability",
+      Title: "Accountability",
       Body: "Difficulty finding trusted, accountable local execution partners",
       // Shade: "blue",
     },
@@ -421,7 +421,7 @@ function Steps() {
 function WhoWeServe() {
   const Wenot = [
     "A strategy or advisory consultancy",
-    "A strategy or advisory consultancy",
+    "●	A company registration service",
     "A network of middlemen or introduction brokers",
   ];
 
