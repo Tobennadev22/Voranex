@@ -421,7 +421,7 @@ function Steps() {
 function WhoWeServe() {
   const Wenot = [
     "A strategy or advisory consultancy",
-    "●	A company registration service",
+    "A company registration service",
     "A network of middlemen or introduction brokers",
   ];
 
