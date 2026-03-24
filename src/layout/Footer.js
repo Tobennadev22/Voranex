@@ -25,20 +25,20 @@ function Footer() {
         px={{ base: 4, md: 8 }}
         direction={{ base: "column", md: "row" }}
         justify="space-between"
-        align={{ base: "center", md: "flex-start" }}
+        align={{ base: "left", md: "flex-start" }}
         gap={{ base: 10, md: 6 }}
       >
         {/* LOGO + DESCRIPTION */}
         <Box
           maxW={{ base: "100%", md: "400px" }}
-          textAlign={{ base: "center", md: "left" }}
+          textAlign={{ base: "left", md: "left" }}
         >
           <Image
             src={voranexafrica}
             alt="Voranex Africa Logo"
             w="180px"
             mb={4}
-            mx={{ base: "auto", md: "0" }}
+            mx={{ base: "0", md: "0" }}
           />
 
           <Text fontSize="sm" color="gray.600">
@@ -51,7 +51,7 @@ function Footer() {
           <HStack
             mt={4}
             spacing={3}
-            justify={{ base: "center", md: "flex-start" }}
+            justify={{ base: "left", md: "flex-start" }}
           >
             <IconButton
               icon={<FaFacebookF />}
@@ -81,7 +81,7 @@ function Footer() {
         </Box>
 
         {/* NAV LINKS */}
-        <VStack spacing={3} align={{ base: "center", md: "flex-start" }}>
+        <VStack spacing={3} align={{ base: "left", md: "flex-start" }}>
           <Text fontWeight="semibold" mb={2}>
             Quick Links
           </Text>
@@ -96,7 +96,7 @@ function Footer() {
         {/* CONTACT */}
         <Box
           maxW={{ base: "100%", md: "320px" }}
-          textAlign={{ base: "center", md: "left" }}
+          textAlign={{ base: "left", md: "left" }}
         >
           <Text fontWeight="semibold" mb={3}>
             Contact

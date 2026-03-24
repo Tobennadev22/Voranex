@@ -10,6 +10,7 @@ function Cta() {
         maxW="1100px"
         mx="auto"
         px={6}
+        textAlign={{ base: "left", md: "left" }}
       >
         <Box>
           <Heading fontSize="2xl" mb={4}>
@@ -19,6 +20,7 @@ function Cta() {
             textColor={"gray.400"}
             w={{ base: "100%", md: "70%" }}
             fontSize={{ base: "12px", md: "16px" }}
+            textAlign={{ base: "left", md: "left" }}
           >
             If Africa is part of your growth roadmap — or simply under
             consideration — Voranex helps you make responsible, data-backed
@@ -36,6 +38,8 @@ function Cta() {
           href="https://tally.so/r/zxNRP1"
           target="_blank"
           rel="noopener noreferrer"
+          w={{ base: "100%", md: "auto" }}
+          mx={{ base: "0", md: "0" }}
         >
           Talk to Sales
         </Button>

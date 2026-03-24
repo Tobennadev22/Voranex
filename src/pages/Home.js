@@ -73,7 +73,7 @@ function Hero() {
       mt={[1, 2, 2]}
     >
       <Text
-        fontSize="sm"
+        fontSize={{ base: "xs", md: "sm" }}
         letterSpacing="wider"
         mb={8}
         py={2}
@@ -132,6 +132,7 @@ function Hero() {
         target="_blank"
         rel="noopener noreferrer"
         borderRadius={"full"}
+        w={{ base: "80%", md: "auto" }}
       >
         Get Started
       </Button>
