@@ -18,105 +18,106 @@ export default function Navbar() {
 
   return (
     <Flex align="center" justify="center">
-      <Flex
-        as="nav"
-        position="fixed"
-        top="0"
-        w={{ base: "100%", md: "900px" }}
-        // borderRadius={{ base: "none", md: "10px" }}
-        mt={{ base: "0", md: 8 }}
-        px={{ base: 4, md: 10 }}
-        py={{ base: 4, md: 4 }}
-        align="center"
-        justify="space-between"
-        // spacing={4}
-        // bg="#fbfbfb"
-        zIndex={1000}
-        borderRadius="full"
-        boxShadow="0 8px 30px rgba(0, 0, 0, 0.08)"
-        bg="rgba(255, 255, 250, 0.86)" // 👈 opacity here
-      >
-        {/* Logo */}
-        {/* <Heading fontSize="lg">Voranex</Heading> */}
-        <ChakraLink as={ReactRouterLink} to="/">
-          <img
-            src={voranexafrica}
-            alt="Voranex Africa Logo"
-            style={{ height: "40px" }}
-          />
-        </ChakraLink>
-        {/* Desktop Menu */}
+      <Box w="100%" position="fixed" bg="#ffffff" py={4} zIndex={1000}>
+        <Flex
+          as="nav"
+          w={{ base: "100%", md: "900px" }}
+          // borderRadius={{ base: "none", md: "10px" }}
+          mt={{ base: 16, md: 24 }}
+          px={{ base: 4, md: 10 }}
+          py={{ base: 2, md: 4 }}
+          align="center"
+          justify="space-between"
+          mx="auto"
+          // spacing={4}
+          // bg="#fbfbfb"
 
-        <HStack spacing={8} display={{ base: "none", md: "flex" }}>
-          <ChakraLink
-            as={ReactRouterLink}
-            to="/"
-            _hover={{ textDecoration: "none", color: "brandRed.500" }}
-          >
-            Home
-          </ChakraLink>
-          <ChakraLink
-            as={HashLink}
-            smooth
-            to="/#how-it-works"
-            _hover={{ textDecoration: "none", color: "brandRed.500" }}
-          >
-            How it works
-          </ChakraLink>
-          {/* <Text cursor="pointer" fontWeight={"medium"}>
-            How it works
-          </Text> */}
-          <ChakraLink
-            as={HashLink}
-            smooth
-            to="/#markets"
-            _hover={{ textDecoration: "none", color: "brandRed.500" }}
-          >
-            Markets
-          </ChakraLink>
-          <ChakraLink
-            as={ReactRouterLink}
-            to="/about"
-            _hover={{ textDecoration: "none", color: "brandRed.500" }}
-          >
-            About
-          </ChakraLink>
-          {/* <Text cursor="pointer" fontWeight={"medium"}>
-            About
-          </Text> */}
-          <ChakraLink
-            as={HashLink}
-            smooth
-            to="/#faq"
-            _hover={{ textDecoration: "none", color: "brandRed.500" }}
-          >
-            FAQ
-          </ChakraLink>
-        </HStack>
-
-        {/* Desktop CTA */}
-        <Button
-          size="sm"
-          bg="brandRed.500"
-          color="white"
-          borderRadius={"full"}
-          display={{ base: "none", md: "inline-flex" }}
-          _hover={{ bg: "brandRed.600" }}
-          as="a"
-          href="https://tally.so/r/zxNRP1"
+          borderRadius="full"
+          boxShadow="0 8px 30px rgba(0, 0, 0, 0.08)"
+          bg="rgba(255, 255, 250, 0.86)" // 👈 opacity here
         >
-          Get Started
-        </Button>
+          {/* Logo */}
+          {/* <Heading fontSize="lg">Voranex</Heading> */}
+          <ChakraLink as={ReactRouterLink} to="/">
+            <img
+              src={voranexafrica}
+              alt="Voranex Africa Logo"
+              style={{ height: "40px" }}
+            />
+          </ChakraLink>
+          {/* Desktop Menu */}
 
-        {/* Mobile Hamburger */}
-        <IconButton
-          aria-label="Toggle Menu"
-          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-          display={{ base: "flex", md: "none" }}
-          variant="ghost"
-          onClick={isOpen ? onClose : onOpen}
-        />
-      </Flex>
+          <HStack spacing={8} display={{ base: "none", md: "flex" }}>
+            <ChakraLink
+              as={ReactRouterLink}
+              to="/"
+              _hover={{ textDecoration: "none", color: "brandRed.500" }}
+            >
+              Home
+            </ChakraLink>
+            <ChakraLink
+              as={HashLink}
+              smooth
+              to="/#how-it-works"
+              _hover={{ textDecoration: "none", color: "brandRed.500" }}
+            >
+              How it works
+            </ChakraLink>
+            {/* <Text cursor="pointer" fontWeight={"medium"}>
+            How it works
+          </Text> */}
+            <ChakraLink
+              as={HashLink}
+              smooth
+              to="/#markets"
+              _hover={{ textDecoration: "none", color: "brandRed.500" }}
+            >
+              Markets
+            </ChakraLink>
+            <ChakraLink
+              as={ReactRouterLink}
+              to="/about"
+              _hover={{ textDecoration: "none", color: "brandRed.500" }}
+            >
+              About
+            </ChakraLink>
+            {/* <Text cursor="pointer" fontWeight={"medium"}>
+            About
+          </Text> */}
+            <ChakraLink
+              as={HashLink}
+              smooth
+              to="/#faq"
+              _hover={{ textDecoration: "none", color: "brandRed.500" }}
+            >
+              FAQ
+            </ChakraLink>
+          </HStack>
+
+          {/* Desktop CTA */}
+          <Button
+            size="sm"
+            bg="brandRed.500"
+            color="white"
+            borderRadius={"full"}
+            display={{ base: "none", md: "inline-flex" }}
+            _hover={{ bg: "brandRed.600" }}
+            as="a"
+            href="https://tally.so/r/zxNRP1"
+          >
+            Get Started
+          </Button>
+
+          {/* Mobile Hamburger */}
+          <IconButton
+            aria-label="Toggle Menu"
+            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+            display={{ base: "flex", md: "none" }}
+            variant="ghost"
+            onClick={isOpen ? onClose : onOpen}
+          />
+        </Flex>
+      </Box>
 
       {/* Mobile Menu */}
       {isOpen && (

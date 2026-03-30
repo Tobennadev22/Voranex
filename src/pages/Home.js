@@ -66,7 +66,7 @@ function Hero() {
       pt={[32, 48, 48]}
       pb={[0, 0, 0]}
       textAlign="center"
-      bg="gradientColor.200"
+      // bg="gradientColor.200"
       borderRadius="2xl"
       mx={{ base: 2, md: 12 }}
       mb={10}
@@ -376,6 +376,7 @@ function Steps() {
         justifyContent={"center"}
         alignItems={"center"}
         mx="auto"
+        px={{ base: 4, md: 10 }}
         mb={10}
         w={["100%", 600, "100%"]}
         textColor={"gray.500"}
@@ -385,7 +386,11 @@ function Steps() {
         companies <br></br> but most expansion efforts fail due to execution
         risk, rather than a lack of demand.
       </Text>
-      <SimpleGrid columns={{ base: 1, md: 5 }} spacing={8} px={10}>
+      <SimpleGrid
+        columns={{ base: 1, md: 5 }}
+        spacing={8}
+        px={{ base: 4, md: 10 }}
+      >
         {steps.map((step, i) => {
           return (
             <VStack
@@ -408,7 +413,11 @@ function Steps() {
               >
                 {step.Title}
               </Text>
-              <Text textAlign={"center"} textColor={"gray.300"}>
+              <Text
+                textAlign={"center"}
+                textColor={"gray.300"}
+                fontSize={{ base: "14px", md: "16px" }}
+              >
                 {step.Body}
               </Text>
             </VStack>

@@ -135,16 +135,6 @@ function Footer() {
           © {new Date().getFullYear()} Voranex. All rights reserved.
         </Text>
       </Flex>
-      <Text
-        fontSize={{ base: "80px", md: "350px" }}
-        spacing={2}
-        lineHeight={{ base: "80px", md: "250px" }}
-        color="gray.200"
-        textAlign="center"
-        fontWeight={{ base: "medium", md: "medium" }}
-      >
-        Voranex
-      </Text>
     </Box>
   );
 }
