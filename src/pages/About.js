@@ -28,7 +28,7 @@ function AboutUs() {
         pb={2}
         // textAlign="center"
       >
-        FOUNDER NOTE
+        MANAGING PARTNER'S NOTE
       </Heading>
       <Text
         fontSize={{ base: "xl", md: "2xl" }}
@@ -65,7 +65,7 @@ function AboutUs() {
           <Text as="cite" fontWeight={"semibold"}>
             Olanrewaju Olokunde
           </Text>
-          <Text as="em">Founder & CEO, Voranex Africa</Text>
+          <Text as="em">Managing Partner, Voranex Africa</Text>
         </Flex>
       </Box>
       {/* <Button
